@@ -1,0 +1,82 @@
+ Course Registration Management System
+
+A simple Java project demonstrating **JDBC connectivity with MySQL** for managing student course registrations.  
+This project is designed for beginners to understand how to connect Java applications to databases using JDBC.
+
+---
+
+## 🚀 Features
+- Connects Java program to MySQL database  
+- Creates the `registrations` table automatically (if it doesn’t exist)  
+- Inserts a sample student and course record  
+- Displays all existing registrations in the console  
+- Uses **JDBC PreparedStatement** for safe SQL operations  
+
+---
+
+## 🧰 Technologies Used
+- **Java (JDK 8 or later)**
+- **MySQL Database**
+- **JDBC Driver** – `mysql-connector-j-9.1.0.jar`
+- **VS Code** / Command Prompt for compilation
+
+---
+
+## 🗂️ Project Structure
+CourseRegistrationSystem/
+│
+├── CourseRegistrationSystem.java # Main Java source file
+├── mysql-connector-j-9.1.0.jar # MySQL JDBC Driver
+└── README.md # Project documentation
+
+yaml
+Copy code
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Database Setup
+1. Open MySQL and create the database:
+   ```sql
+   CREATE DATABASE course_db;
+   USE course_db;
+The program will automatically create the registrations table.
+
+2️⃣ Run the Program
+In VS Code Terminal (PowerShell):
+
+bash
+Copy code
+javac -cp ".;mysql-connector-j-9.1.0.jar" CourseRegistrationSystem.java
+java -cp ".;mysql-connector-j-9.1.0.jar" CourseRegistrationSystem
+In Command Prompt:
+
+bash
+Copy code
+javac -cp .;mysql-connector-j-9.1.0.jar CourseRegistrationSystem.java
+java -cp .;mysql-connector-j-9.1.0.jar CourseRegistrationSystem
+🧩 Example Output
+yaml
+Copy code
+✅ Connected to MySQL database successfully!
+📋 Table 'registrations' verified/created.
+🎉 Sample record inserted successfully!
+
+📘 Current Registrations:
+ID: 1 | Student: Priya | Course: Java Basics
+
+🔒 Connection closed successfully.
+🧠 Learning Outcomes
+Understanding JDBC workflow (Driver → Connection → Statement → Query → ResultSet)
+
+Executing SQL commands from Java
+
+Managing database connections and queries efficiently
+
+💡 Future Enhancements
+Add user input for registering students interactively
+
+Add course list and student management modules
+
+Implement a GUI using Java Swing or JavaFX
